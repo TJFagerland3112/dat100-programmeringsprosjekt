@@ -1,18 +1,22 @@
 package no.hvl.dat100.javel.oppgave1;
-
+import java.util.Scanner;
 public class DailyPower {
 
     // a) print power prices during a day
     public static void printPowerPrices(double[] prices) {
 
-        // TODO
+        for (int i  = 0; i < prices.length; i++) {
+            System.out.printf("%.2f NOK ", prices[i]);
+        }
 
     }
 
     // b) print power usage during a day
     public static void printPowerUsage(double[] usage) {
 
-        // TODO
+        for (int i  = 0; i < usage.length; i++) {
+            System.out.printf("%.2f kWh ", usage[i]);
+        }
 
     }
 
@@ -21,7 +25,9 @@ public class DailyPower {
 
         double sum = 0;
 
-        // TODO
+        for (int i  = 0; i < usage.length; i++) {
+            sum += usage[i];
+        }
 
         return sum;
     }
@@ -30,8 +36,17 @@ public class DailyPower {
     public static double computeSpotPrice(double[] usage, double[] prices) {
 
         double price = 0;
+        double timeUsage = 0;
+        double timePrice = 0;
 
-        // TODO
+        for (int i  = 0; i < usage.length; i++) {
+            for (int j  = 0; j < prices.length; j++) {
+                timeUsage = usage[i];
+                timePrice = prices[j];
+                price += timeUsage * timePrice;
+            }
+        }
+
 
         return price;
     }
@@ -40,13 +55,24 @@ public class DailyPower {
     private static final double THRESHOLD = 0.9375;
     private static final double PERCENTAGE = 0.9;
 
-    private static double getSupport(double usage, double price) {
-
+    static double getSupport(double usage, double price) {
+        /*System.out.print("hvilken time vil du vite strømstøtte på? ");
+        Scanner in  = new Scanner(System.in);
+        int time = in.nextInt();
+        System.out.println(" ");
         double support = 0;
 
-        // TODO
+        double timeUsage = 0 ;
+        timeUsage = usage[time];
+        double timePrice = 0;
+        timePrice = price[time];
+        double timePris = timeUsage * timePrice;
 
-        return support;
+        if (timeUsage > THRESHOLD) {
+            support = (timePris - THRESHOLD) * PERCENTAGE;
+        } else support = 0;
+
+        return support; */ //ikke ferdig.
     }
 
     // f) compute power support for a single day
