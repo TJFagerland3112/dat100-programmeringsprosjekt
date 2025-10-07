@@ -56,6 +56,7 @@ public class DailyPower {
     private static final double PERCENTAGE = 0.9;
 
     static double getSupport(double usage, double price) {
+        double support = 0;
         /*System.out.print("hvilken time vil du vite strømstøtte på? ");
         Scanner in  = new Scanner(System.in);
         int time = in.nextInt();
@@ -71,8 +72,8 @@ public class DailyPower {
         if (timeUsage > THRESHOLD) {
             support = (timePris - THRESHOLD) * PERCENTAGE;
         } else support = 0;
-
-        return support; */ //ikke ferdig.
+*/
+        return support;  //ikke ferdig.
     }
 
     // f) compute power support for a single day

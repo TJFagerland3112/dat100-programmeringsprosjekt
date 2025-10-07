@@ -24,7 +24,7 @@ public class DayMain {
         System.out.println();
         System.out.printf("%.2f NOK ", DailyPower.computeSpotPrice(powerusage_day, powerprices_day));
         System.out.println();
-        System.out.printf("%.2f NOK ", DailyPower.getSupport(powerusage_day, powerprices_day));
+        //System.out.printf("%.2f NOK ", DailyPower.getSupport(powerusage_day, powerprices_day));
 
 
         /*
